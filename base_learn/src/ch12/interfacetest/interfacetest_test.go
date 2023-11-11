@@ -20,6 +20,7 @@ func (p *GoProgrammer) WriteHelloWorld() string {
 func TestClient(t *testing.T) {
 
 	var p Programmer // 接口变量
+	// 如果是接口变量时候 可以通过指针去实现接口
 	p = new(GoProgrammer)
 
 	//p2:=GoProgrammer{}
