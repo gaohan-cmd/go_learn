@@ -18,7 +18,7 @@ import (
 ●接收取消通知<-ctx.Done()
 */
 func TestCancel(t *testing.T) {
-	// ctx是新创建的带有取消功能的上下文对象，cancel是与之对应的取消函数
+	// ctx是新创建的带有取消功能的上下文对象，cancel是取消函数,会取消 ctx 及其派生的所有子上下文
 	ctx, cancel := context.WithCancel(context.Background())
 	// 同时启动5个协程
 	for i := 0; i < 5; i++ {
